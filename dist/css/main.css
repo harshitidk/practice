@@ -1,1 +1,71 @@
-/* No CSS *//*# sourceMappingURL=main.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+body {
+  background-color: black;
+  color: white;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.lord {
+  position: relative;
+  height: 100vh;
+  background-color: black;
+  background-image: url("../images/desktop/image-hero.jpg");
+  background-position: center;
+  background-size: cover;
+  z-index: 0;
+}
+
+.lord-h {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 20vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  z-index: 2;
+}
+
+.lord-h-1 {
+  font-size: 40px;
+  font-family: "Alata", sans-serif;
+  font-weight: bold;
+}
+
+.lord-h-2 {
+  position: relative;
+}
+
+.lord-h-2-i {
+  display: inline-block;
+  width: 100px;
+}
+
+.lord-h-3 {
+  display: none;
+}
+
+.lord-h-3-b {
+  padding: 2px 12px;
+  background: white;
+  margin: 4px 0px;
+}
+
+.lord-d {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: black;
+  z-index: 1;
+  opacity: 30%;
+}
+
+.hover:hover {
+  cursor: pointer;
+}
+/*# sourceMappingURL=main.css.map */
