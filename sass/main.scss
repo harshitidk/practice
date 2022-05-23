@@ -5,6 +5,13 @@ body
     background-color: black;
     color: white;
     font-family: $f2;
+    margin: 0;
+    padding: 0;
+}
+
+.hover:hover
+{
+    cursor: pointer;
 }
 
 .lord 
@@ -23,12 +30,13 @@ body
         display: flex;
         height: 20vh;
         align-items: center;
-        justify-content: space-around;
+        justify-content: space-between;
         z-index: 2;
+        padding: 0px 150px;
 
         &-1
         {
-            font-size: 40px;
+            font-size: 40px; 
             font-family: $f1;
             font-weight: bold;
         }
@@ -40,7 +48,22 @@ body
             &-i
             {
                 display: inline-block;
-                width: 100px;
+                width: 80px;
+                margin: 0px 10px;
+                position: relative;
+
+                &::before
+                {
+                    content: '';
+                    position: absolute;
+                    bottom: -2px;
+                    left: 0;
+                    right: 99px;
+                    height: 2px;
+                    background-color: white;
+                    // transform: scaleX(0);
+                    transition: right 0.5s ease;
+                }
             }
         }
 
@@ -53,6 +76,27 @@ body
                 background: white;
                 margin: 4px 0px;
             }
+        }
+    }
+
+    &-p
+    {
+        position: relative;
+        z-index: 2;
+
+        &-head
+        {
+            position: absolute;
+            left: 150px;
+            top: 15vh;
+            font-size: 60px;
+            font-family: $f2;
+            color: white;
+            font-weight: 300;
+            width: 480px;
+            text-transform: uppercase;
+            padding: 30px;
+            outline: solid 2px;
         }
     }
 
@@ -69,7 +113,56 @@ body
     }
 }
 
-.hover:hover
+.lord-h-2-i:hover::before
 {
-    cursor: pointer;
+    right: 0;
+}
+
+.king
+{
+    display: flex;
+    background-color: white;
+    color: black;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+
+    &-i
+    {
+        position: absolute;
+        left: 20vh;
+    }
+
+    &-p
+    {
+        width: 500px;
+        padding: 100px;
+        position: absolute;
+        background-color: white;
+        bottom: 5vh;
+        right: 20vh;
+
+        &-h
+        {
+            font-size: 50px;
+            font-family: $f2;
+            text-transform: uppercase;
+            font-weight: 300;
+            margin-bottom: 30px;
+            left: -50px;
+        }
+
+        &-p
+        {
+            color: $c3;
+            line-height: 1.5;
+            font-weight: 600;
+        }
+    }
+}
+
+.gallery 
+{
+    background-color: white;
 }

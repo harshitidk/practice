@@ -3,6 +3,12 @@ body {
   background-color: black;
   color: white;
   font-family: "Josefin Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.hover:hover {
+  cursor: pointer;
 }
 
 .lord {
@@ -24,9 +30,11 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   z-index: 2;
+  padding: 0px 150px;
 }
 
 .lord-h-1 {
@@ -41,7 +49,21 @@ body {
 
 .lord-h-2-i {
   display: inline-block;
-  width: 100px;
+  width: 80px;
+  margin: 0px 10px;
+  position: relative;
+}
+
+.lord-h-2-i::before {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 99px;
+  height: 2px;
+  background-color: white;
+  -webkit-transition: right 0.5s ease;
+  transition: right 0.5s ease;
 }
 
 .lord-h-3 {
@@ -52,6 +74,25 @@ body {
   padding: 2px 12px;
   background: white;
   margin: 4px 0px;
+}
+
+.lord-p {
+  position: relative;
+  z-index: 2;
+}
+
+.lord-p-head {
+  position: absolute;
+  left: 150px;
+  top: 15vh;
+  font-size: 60px;
+  font-family: "Josefin Sans", sans-serif;
+  color: white;
+  font-weight: 300;
+  width: 480px;
+  text-transform: uppercase;
+  padding: 30px;
+  outline: solid 2px;
 }
 
 .lord-d {
@@ -65,7 +106,56 @@ body {
   opacity: 30%;
 }
 
-.hover:hover {
-  cursor: pointer;
+.lord-h-2-i:hover::before {
+  right: 0;
+}
+
+.king {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: white;
+  color: black;
+  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+}
+
+.king-i {
+  position: absolute;
+  left: 20vh;
+}
+
+.king-p {
+  width: 500px;
+  padding: 100px;
+  position: absolute;
+  background-color: white;
+  bottom: 5vh;
+  right: 20vh;
+}
+
+.king-p-h {
+  font-size: 50px;
+  font-family: "Josefin Sans", sans-serif;
+  text-transform: uppercase;
+  font-weight: 300;
+  margin-bottom: 30px;
+  left: -50px;
+}
+
+.king-p-p {
+  color: #8c8c8c;
+  line-height: 1.5;
+  font-weight: 600;
+}
+
+.gallery {
+  background-color: white;
 }
 /*# sourceMappingURL=main.css.map */
